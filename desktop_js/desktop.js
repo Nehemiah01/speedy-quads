@@ -12,11 +12,9 @@ lightBlue.addEventListener('click', () => {
 
     document.querySelector('select').style.borderColor = 'rgba(255, 255, 255, 0.5)'   
     document.querySelector('button, select').style.color = 'rgba(255, 255, 255, 0.5)'
-    document.querySelector('button').style.color = '#fff'
-    
-    for (const link of document.querySelectorAll('a')) {
-        link.style.color = '#fff'    
-    }
+    document.querySelector('small').style.color = 'rgba(255, 255, 255, 0.5)'
+    document.querySelector('button, #details').style.color = '#fff'
+
     for (const child of lightBlue.parentElement.children) {
         child.style.transform = ''   
     }
@@ -29,10 +27,10 @@ pink.addEventListener('click', () => {
     pink.style.transform = 'scale(1.3)'
     document.querySelector('select').style.borderColor = 'rgba(255, 255, 255, 0.5)'   
     document.querySelector('button, select').style.color = 'rgba(255, 255, 255, 0.5)'
-    document.querySelector('button').style.color = '#fff'
-    for (const link of document.querySelectorAll('a')) {
-        link.style.color = '#fff'    
-    }
+    document.querySelector('small').style.color = 'rgba(255, 255, 255, 0.5)'
+    
+    document.querySelector('button, #details').style.color = '#fff'
+
     for (const child of pink.parentElement.children) {
         child.style.transform = ''   
     }
@@ -44,10 +42,10 @@ yellow.addEventListener('click', () => {
     yellow.style.transform = 'scale(1.3)'
     document.querySelector('select').style.borderColor = 'rgba(255, 255, 255, 0.5)'   
     document.querySelector('button, select').style.color = 'rgba(255, 255, 255, 0.5)'
-    document.querySelector('button').style.color = '#fff'
-    for (const link of document.querySelectorAll('a')) {
-        link.style.color = '#fff'    
-    }
+    document.querySelector('small').style.color = 'rgba(255, 255, 255, 0.5)'
+    
+    document.querySelector('button, #details').style.color = '#fff'
+   
     for (const child of yellow.parentElement.children) {
         child.style.transform = ''   
     }
@@ -57,11 +55,11 @@ white.addEventListener('click', () => {
     body.classList= 'white'
 
     white.style.transform = 'scale(1.3)'
-    document.querySelector('select').style.borderColor = '#000'   
-    document.querySelector('button, select').style.color = '#000'
-    for (const link of document.querySelectorAll('a')) {
-        link.style.color = '#000'    
-    }
+    document.querySelector('select').style.borderColor = '#2c3e50'   
+    document.querySelector('button, select').style.color = '#2c3e50'
+    document.querySelector('small').style.color = '#2c3e50'
+    document.querySelector('#details').style.color = '#2c3e50'
+  
     for (const child of white.parentElement.children) {
         child.style.transform = ''   
     }
@@ -69,17 +67,15 @@ white.addEventListener('click', () => {
 })
 
 
+const hamburger = document.getElementById('hamburger')
+hamburger.addEventListener('click', toggler = (e) => {
+    // console.log("hello")
+    hamburger.classList.toggle('cancel')
+})
+
 let heroImage = document.querySelector('#skate-1')
 
 let select = document.querySelector('select')
-let option1 = document.querySelector('option:first-child')
-let option2 = document.querySelector('option:nth-of-type(2)')
-let option3 = document.querySelector('option:nth-of-type(3)')
-let option4 = document.querySelector('option:nth-of-type(4)')
-
-
-console.log(option1)
-
 
 select.addEventListener('change', (e) => {
     e.preventDefault()
